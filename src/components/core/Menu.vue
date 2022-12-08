@@ -1,7 +1,7 @@
 <template>
   <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
     <div class="logo" />
-    <div align="center" style="padding: 20px 0 10px 0 ;">
+    <div align="center" style="padding: 20px 0 10px 0">
       <a-button
         @click="toggleCollapse"
         type="primary"
@@ -26,7 +26,7 @@
         </span>
       </a-menu-item>
       <a-menu-item key="3">
-        <upload-outlined />
+        <code-outlined />
         <span>
           <router-link id="white" to="/workshop-1">Workshop-1</router-link>
         </span>
@@ -40,7 +40,7 @@ import { defineComponent, ref } from "vue";
 import {
   UserOutlined,
   VideoCameraOutlined,
-  UploadOutlined,
+  CodeOutlined,
 } from "@ant-design/icons-vue";
 
 export default defineComponent({
@@ -48,7 +48,7 @@ export default defineComponent({
   components: {
     UserOutlined,
     VideoCameraOutlined,
-    UploadOutlined,
+    CodeOutlined,
   },
   setup(props, { emit }) {
     const selectedKeys = ref(0);
