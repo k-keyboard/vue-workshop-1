@@ -15,14 +15,14 @@
                 </template>
               </a-card-meta>
               <div style="margin-top: 10px">
-                <a-checkbox v-model:checked="checked"></a-checkbox>
+                <a-checkbox @change="selected(item)"></a-checkbox>
               </div>
             </a-card>
           </a-col>
         </a-row>
       </a-col>
         <a-col :flex="3"> 
-            <p>5555</p>
+            <h2>ยอดชำระเงิน : </h2>
         </a-col>
     </a-row>
   </a-col>
@@ -31,7 +31,22 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  methods:{
+    selected:function(item){
+        item.active = ! item.active
+    },
+    totel:function(){
+      var sum =0;
+      this.products.foreach(function(item)){
+        if(item.active){
+          sum+=item.price
+        }
+    }
+    
+  }
+  },
   setup() {
+    
     return {
       products: [
         {
@@ -39,17 +54,26 @@ export default defineComponent({
           name: "Product One",
           price: 150,
           image: "https://cdn-icons-png.flaticon.com/512/2674/2674505.png",
-          active: false,
+          active: false
         },
         {
           id: 2,
           name: "Product Two",
           price: 100,
           image: "https://cdn-icons-png.flaticon.com/512/2674/2674505.png",
-          active: false,
+          active: false
         },
+        {
+          id: 3,
+          name: "Product Two",
+          price: 95,
+          image: "https://cdn-icons-png.flaticon.com/512/2674/2674505.png",
+          active: false
+        }
       ],
+      sum;
     };
   },
+  
 });
 </script>
