@@ -8,9 +8,9 @@
     }"
   >
   <a-row type="flex" justify="space-around" align="middle">
-      <a-col :span="6" align="center">
+      
           <router-view></router-view>
-      </a-col>
+      
   </a-row>
   </a-layout-content>
 

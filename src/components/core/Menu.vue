@@ -31,6 +31,12 @@
           <router-link id="white" to="/workshop-1">Workshop-1</router-link>
         </span>
       </a-menu-item>
+      <a-menu-item key="4">
+        <code-outlined />
+        <span>
+          <router-link id="white" to="/workshop-2">Workshop-2</router-link>
+        </span>
+      </a-menu-item>
     </a-menu>
   </a-layout-sider>
 </template>

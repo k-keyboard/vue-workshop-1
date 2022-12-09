@@ -1,8 +1,9 @@
 <template>
+  <a-col :span="18" align="center">
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  </div></a-col>
 </template>
 
 <script lang="ts">
